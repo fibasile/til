@@ -5,7 +5,7 @@ description: "This is a log of the things I learn each day."
 logo: http://placehold.it/120x120?t=TIL # 120x120 px default image used for Twitter summary card
 teaser: jekyll_teaser.png # 400x250 px default teaser image used in image archive grid
 locale: en
-# url: # https://fibasile.github.io/til
+url: # https://fibasile.github.io/til
 feed:
   path: atom.xml
 
