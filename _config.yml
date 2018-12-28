@@ -1,0 +1,64 @@
+# Site wide configuration
+
+title: "Things I learned"
+description: "This is a log of the things I learn each day."
+logo: http://placehold.it/120x120?t=TIL # 120x120 px default image used for Twitter summary card
+teaser: jekyll_teaser.png # 400x250 px default teaser image used in image archive grid
+locale: en
+# url: # https://fibasile.github.io/til
+feed:
+  path: atom.xml
+
+# Jekyll configuration
+
+sass:
+  sass_dir: _sass
+  style: compressed
+permalink: /:categories/:title/
+kramdown:
+  toc_levels: 1..2
+highlighter: rouge
+plugins:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+
+
+# Site owner
+owner:
+  name: Fiore Basile
+  email: fiore.basile@gmail.com
+  twitter: fibasile
+  # google:
+  #   ad-client:
+  #   ad-slot:
+  bio: Hacking bits & atoms from Pisa, Italy
+  avatar: https://avatars2.githubusercontent.com/u/32947?s=460&v=4 #bio-photo.jpg # 160x160 px image for author byline
+  disqus-shortname: fibasile
+
+
+include:
+  - .htaccess
+exclude:
+  - "*.less"
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - config
+  - gulpfile.js
+  - lib
+  - log
+  - node_modules
+  - package.json
+  - spec
+  - tmp

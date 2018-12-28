@@ -1,0 +1,22 @@
+# Site navigation links
+
+- title: About me
+  url: http://fibasile.github.io
+  excerpt: Something about me
+  image: me.jpg
+- title: Frontend
+  url: /categories/frontend
+  excerpt: Web technologies, Blogging, Design, Static site generators
+  image: frontend.png
+- title: Backend
+  url: /categories/backend
+  excerpt: System administration, Docker, Node.js, Linux
+  image: backend.png
+- title: Hardware
+  url: /categories/hardware
+  excerpt: Electronics, Embedded programming, Digital fabrication
+  image: hardware.jpg
+- title: Life hacks
+  url: /categories/lifehacks
+  excerpt: Productivity, project management, budgeting and money management
+  image: lifehacks.jpg

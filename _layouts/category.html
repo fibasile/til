@@ -1,0 +1,35 @@
+---
+layout: default
+<!-- title: Posts tagged {{page.label}} -->
+---
+
+
+<div id="main" role="main">			
+	<div class="wrap">
+		{% if page.image.feature %}
+		<div class="page-feature">
+			<div class="page-image">
+				<img src="{{ site.url }}/images/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}">
+				{% if page.image.credit %}{% include image-credit.html %}{% endif %}
+			</div><!-- /.page-image -->
+		</div><!-- /.page-feature -->
+		{% endif %}
+		<div class="page-title">
+            <h1>Topic: {{ page.title }}</h1>
+			{% if page.excerpt %}<h4>{{ page.excerpt }}</h4>{% endif %}
+		</div>
+		<div class="archive-wrap">
+			<div class="page-content">
+				
+<div style="padding-bottom:24px">{{ site.categories[page.tag] | size }} posts found</div>
+
+<div class="tiles">
+{% for post in site.categories[page.tag] %}
+  {% include post-list.html %}
+{% endfor %}
+</div><!-- /.tiles -->
+
+			</div><!-- /.page-content -->
+		</div class="archive-wrap"><!-- /.archive-wrap -->
+	</div><!-- /.wrap -->
+</div><!-- /#main -->
