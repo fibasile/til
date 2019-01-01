@@ -7,4 +7,4 @@ For those who want to try a quick boilerplate for Material UI, this one uses Par
 
 The hot reload is automatic, and the project structure is very slim.
 
-https://github.com/fibasile/materialui-parcel-boilerplate
+[https://github.com/fibasile/materialui-parcel-boilerplate](https://github.com/fibasile/materialui-parcel-boilerplate)
