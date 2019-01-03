@@ -3,12 +3,11 @@ title: JSON API Cheatsheet
 layout: article
 categories: backend
 excerpt: A quick reference to help design JSON-API apis
-tags: [ "json-api", "backend" ]
+tags:
+- json-api
+- backend
+
 ---
-
-
-# JSON-API Cheatsheet
-
 ## Introduction
 
 Properly organizing API endpoints and JSON-serialized data responses it's pretty difficult, especially when you work on a project that will extended and improved by a larger community.
@@ -23,11 +22,11 @@ Adopting the full standard is maybe too much for this project.
 
 In short the API must respect few conventions:
 
-- Content-type must always be `Content-Type: application/vnd.api+json`
-- JSON Payloads have a standard structure, see section below
-- Responses use JSON but add typing checks i.e. JSON Schema types
-- Relationships are modeled in the response
-- Standard error codes
+* Content-type must always be `Content-Type: application/vnd.api+json`
+* JSON Payloads have a standard structure, see section below
+* Responses use JSON but add typing checks i.e. JSON Schema types
+* Relationships are modeled in the response
+* Standard error codes
 
 ## Request and response headers
 
@@ -47,26 +46,26 @@ Content-Type: application/vnd.api+json
 
 ## Response codes
 
-| Code | Verbose   | Description                                 |
-| ---- | --------- | ------------------------------------------- |
-| 200  | OK        | resource / relationship fetched correctly   |
-| 404  | Not found | resource / relationship not found           |
-| 201  | Created   | POST request created a resource             |
-| 202  | Accepted  | POST request accepted but not yet processed |
-| 403  | Forbidden | unsupported request                         |
-| 409  | Conflict  | duplicate operation with the same client id |
+| Code | Verbose | Description |
+| --- | --- | --- |
+| 200 | OK | resource / relationship fetched correctly |
+| 404 | Not found | resource / relationship not found |
+| 201 | Created | POST request created a resource |
+| 202 | Accepted | POST request accepted but not yet processed |
+| 403 | Forbidden | unsupported request |
+| 409 | Conflict | duplicate operation with the same client id |
 
 ## Resource identifier
 
 Any resource must contain:
 
-- id
-- type
+* id
+* type
 
 and optionally
 
-- attributes
-- relationships
+* attributes
+* relationships
 
 ```json
 {
@@ -93,47 +92,45 @@ Responses contains always a toplevel JSON Object
 
 And at least one of the following:
 
-- data: the document’s “primary data”
-- errors: an array of error objects
-- meta: a meta object that contains non-standard meta-information.
+* data: the document’s “primary data”
+* errors: an array of error objects
+* meta: a meta object that contains non-standard meta-information.
 
 it may contain also:
 
-- jsonapi: an object describing the server’s implementation
-- links: a links object related to the primary data.
-- included: an array of resource objects that are related to the primary data and/or each other (“included resources”).
+* jsonapi: an object describing the server’s implementation
+* links: a links object related to the primary data.
+* included: an array of resource objects that are related to the primary data and/or each other (“included resources”).
 
 ## Relationships
 
 Relationship resource objects must at least contain one of:
 
-- links: a links object containing at least one of the following:
-  - self: a link for the relationship itself (a “relationship link”). This link allows the client to directly manipulate the relationship. For example, removing an author through an article’s relationship URL would disconnect the person from the article without deleting the people resource itself. When fetched successfully, this link returns the linkage for the related resources as its primary data. (See Fetching Relationships.)
-  - related: a related resource link
-- data: resource linkage
-- meta: a meta object that contains non-standard meta-information about the relationship.
+* links: a links object containing at least one of the following:
+  * self: a link for the relationship itself (a “relationship link”). This link allows the client to directly manipulate the relationship. For example, removing an author through an article’s relationship URL would disconnect the person from the article without deleting the people resource itself. When fetched successfully, this link returns the linkage for the related resources as its primary data. (See Fetching Relationships.)
+  * related: a related resource link
+* data: resource linkage
+* meta: a meta object that contains non-standard meta-information about the relationship.
 
-```
-{
-  "type": "articles",
-  "id": "1",
-  "attributes": {
-    "title": "Rails is Omakase"
-  },
-  "relationships": {
-    "author": {
-      "links": {
-        "self": "http://example.com/articles/1/relationships/author",
-        "related": "http://example.com/articles/1/author"
+    {
+      "type": "articles",
+      "id": "1",
+      "attributes": {
+        "title": "Rails is Omakase"
       },
-      "data": { "type": "people", "id": "9" }
+      "relationships": {
+        "author": {
+          "links": {
+            "self": "http://example.com/articles/1/relationships/author",
+            "related": "http://example.com/articles/1/author"
+          },
+          "data": { "type": "people", "id": "9" }
+        }
+      },
+      "links": {
+        "self": "http://example.com/articles/1"
+      }
     }
-  },
-  "links": {
-    "self": "http://example.com/articles/1"
-  }
-}
-```
 
 ## Compound Documents
 
@@ -214,10 +211,10 @@ Content-Type: application/vnd.api+json
 
 Links are used for pagination, containing resources expressed as urls
 
-- first: the first page of data
-- last: the last page of data
-- prev: the previous page of data
-- next: the next page of data
+* first: the first page of data
+* last: the last page of data
+* prev: the previous page of data
+* next: the next page of data
 
 The value `null` must be used if the specific key is not available
 
@@ -405,14 +402,14 @@ Errors must be returned as an Array `errors` key on the top-level object.
 
 Each error can include:
 
-- id: optional unique identifier
-- status: HTTP status code
-- code
-- title
-- detail
-- links
-  - about: link to the page describing this specific error
+* id: optional unique identifier
+* status: HTTP status code
+* code
+* title
+* detail
+* links
+  * about: link to the page describing this specific error
 
 # References
 
-- [JSON API Specification](https://jsonapi.org)
+* [JSON API Specification](https://jsonapi.org)
