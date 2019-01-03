@@ -10,7 +10,7 @@ tags:
 ---
 ## Introduction
 
-Properly organizing API endpoints and JSON-serialized data responses it's pretty difficult, especially when you work on a project that will extended and improved by a larger community.
+Properly organising API endpoints and JSON-serialized data responses it's pretty difficult, especially when you work on a project that will extended and improved by a larger community.
 
 I'm getting used to stick to the [JSON-API](https://jsonapi.org/) - version 1.0, considered stable at the time of writing - when defining APIs. Few conventions make your API clearer and many libraries also support serializing and deserializing JSON APIs with ease.
 
@@ -25,7 +25,7 @@ In short the API must respect few conventions:
 * Content-type must always be `Content-Type: application/vnd.api+json`
 * JSON Payloads have a standard structure, see section below
 * Responses use JSON but add typing checks i.e. JSON Schema types
-* Relationships are modeled in the response
+* Relationships are modelled in the response
 * Standard error codes
 
 ## Request and response headers
