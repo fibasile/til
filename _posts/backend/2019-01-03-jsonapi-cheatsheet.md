@@ -1,7 +1,12 @@
 ---
 title: JSON API Cheatsheet
 layout: article
+categories: backend
+excerpt: A quick reference to help design JSON-API apis
+tags: [ "json-api", "backend" ]
 ---
+
+
 # JSON-API Cheatsheet
 
 ## Introduction
