@@ -10,7 +10,9 @@ tags:
 ---
 ## Managing state in Flutter
 
-State management in Flutter feels quite a debated topic. The [official documentation](https://flutter.io/docs/development/data-and-backend/state-mgmt) itself doesn't give any clear recommendation other that of reading a ton of articles!
+State management in Flutter is discussed a lot, but there's no widely recognized solution. 
+
+The [official documentation](https://flutter.io/docs/development/data-and-backend/state-mgmt) itself doesn't give any clear recommendation other that of reading a ton of articles!
 
 I'll try to make a quick summary of what I learned reading (a few) of them.
 
