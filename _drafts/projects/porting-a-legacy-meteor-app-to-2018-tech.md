@@ -108,7 +108,7 @@ Most of the frameworks in the list are pretty popular. I tried most of them in m
 
 In short, I'll again favour the new kid on the block over the more stable solutions and see what happens. Will Strapi work in 5 years? 
 
-Well this isn't really a bet. If Strapi will be abandoned or dropped in favour of something fancier, most of my code this time ( business logic, persistance ) will still run under express or similar, and the front-end code will be independent and so reusable. Only the roles and auth would need to be redone.
+Well this isn't really a bet. If Strapi will be abandoned or dropped in favour of something fancier, most of my code this time ( business logic, data persistance ) will still run under express or similar, and the front-end code will be independent and so reusable. Only the roles and auth would need to be redone.
 
 ## Frontend framework
 
