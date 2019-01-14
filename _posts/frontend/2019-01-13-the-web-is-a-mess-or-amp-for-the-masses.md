@@ -1,9 +1,13 @@
 ---
 layout: article
 title: The web is a mess, or AMP for the masses
-tags: []
+tags:
+- amp
+- mobile
+- jekyll
 date: 2019-01-13 00:00:00 +0100
-category: []
+category:
+- frontend
 
 ---
 The web is a mess. 
