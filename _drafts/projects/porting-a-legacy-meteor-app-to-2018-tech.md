@@ -23,11 +23,15 @@ Which I never spent much time to fix, partially due to the technology choices I 
 
 Actually I did just one update, when a new version of meteor accounts-ui broke my app two years ago, but nothing else since then.
 
-As you can figure out from the title, the app is written in Meteor, so both client and server share the same code.
+As you can figure out from the post title, the app is written in Meteor, so both client and server share the same code, and data is exchanged through a socket protocol allowing also remote method invocation. The app uses Blaze templates, which at the time (React and Vue didn't exist) were state of the art.
 
-While I appreciated (and still do) the easy path created by the Meteor team when starting, I now regret being tied to something that only runs on Node 0.10.x and doesn’t leave me other option than rewrite everything from scratch, both on the server and the client side.
+While I appreciated (and still do) the easy path created by the Meteor team when starting, I now regret being tied to something that only runs on Node 0.10.x and doesn’t leave me other option than rewrite everything from scratch, both on the server and the client side. 
 
-Meteor now has evolved into something more robust and stable. Many people use it in production and are happy about it. From my side, I'll try to upgrade this app to a more modern stack, with a clear separation between front-end and backend. Feels like going back in time, but I still see this is a much more effective approach, especially if I need to add a mobile app in a later time.
+Meteor now has evolved into something more robust and stable. It supports React,  Angular,  Vue.js and not only Blaze templates. Many people use it in production and are happy about it. Probably I could easily port the app to a new version of meteor in about a week. But I don't want to find myself in the same situation again. 
+
+Again I have nothing against Meteor, but I feel my hands tied because of this solution now that I want to go back and work to the Jobs app.
+
+So from my side, I'll try to upgrade this app to a more modern stack, with a clear separation between front-end and backend. Feels like going back in time, in the era of GraphQL, but I still see this is a much more effective approach, especially if I need to add a mobile app in a later time.
 
 ## Moving to a modern stack
 
@@ -36,6 +40,15 @@ I want this app to grow and be a pleasure to extend and maintain, also I would l
 One the good side, I still can reuse much of the database structure defined few years ago. Still I now have a choice on pretty much everything else in the technology stack. Let’s figure out the options.
 
 ### Database: MongoDB vs Firebase vs SQL
+
+The db requirements for this app are pretty low:
+
+* few data tables
+* mostly read-only data
+* very few relationships
+* small data size
+
+ Here the most common choices.
 
 #### Mongodb
 
@@ -83,6 +96,10 @@ CON
 * rigid structure for the DB unless you want to deal with migrations
 * overkill for a few tables
 * scalability?
+
+The app is now using MongoDB. I could basically do it with SQLite, but I would like to have a maintenance-free solution and an environment allowing easy backups and high availability.
+
+So i'll stick to MongoDB, but will host the database on MongoHQ on a dedicated instance that also provides databases to other applications.
 
 ## Backend framework
 
