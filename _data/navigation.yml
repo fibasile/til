@@ -1,7 +1,7 @@
 # Site navigation links
 
 - title: About me
-  url: http://fibasile.github.io
+  url: /about
   excerpt: Something about me
   image: me.jpg
 - title: Frontend
