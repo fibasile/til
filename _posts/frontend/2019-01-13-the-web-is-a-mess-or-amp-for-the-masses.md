@@ -1,6 +1,6 @@
 ---
 layout: article
-title: The web is a mess, or AMP for the masses
+title: The web is a mess, another look at AMP
 tags:
 - amp
 - mobile
@@ -8,6 +8,7 @@ tags:
 date: 2019-01-13 00:00:00 +0100
 category:
 - frontend
+- projects
 
 ---
 The web is a mess. 
