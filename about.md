@@ -1,6 +1,6 @@
 ---
 title: About me
-layout: page
+layout: default
 ---
 
 I'm [Fiore Basile](./about), expert in [web technologies](https://github.com/fibasile), [digital fabrication](https://fabctory.com) and [distributed education](http://academany.org).
