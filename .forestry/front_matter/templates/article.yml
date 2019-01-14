@@ -30,3 +30,4 @@ fields:
   default: ''
 pages:
 - _posts/frontend/2019-01-13-the-web-is-a-mess-or-amp-for-the-masses.md
+- _posts/projects/porting-a-legacy-meteor-app-to-2018-tech.md
